@@ -16,3 +16,7 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+
+Route::get('ppap/pedidos', 'PedidosController@index');
+
+Route::get('ppap/pedidos/create', 'PedidosController@create');
