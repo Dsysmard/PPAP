@@ -15,8 +15,7 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{url('css/_all-skins.min.css')}}">
-    <link rel="apple-touch-icon" href="{{url('img/apple-touch-icon.png')}}">
-    <link rel="shortcut icon" href="{{url('img/favicon.ico')}}">
+    
 
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -47,7 +46,7 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <small class="bg-red">Online</small>
-                  <span class="hidden-xs">Usuario</span>
+                  <span class="hidden-xs">{{ Auth::user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
