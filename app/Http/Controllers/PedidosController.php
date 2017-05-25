@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Pedido;
+
+use Illuminate\Support\Facades\Auth;
+
 class PedidosController extends Controller
 {
     /**
@@ -11,9 +15,13 @@ class PedidosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function index()
     {
-        return view('ppap.pedidos.index');
+        $pedidos = Pedido::all();
+        return view("ppap.pedidos.index", ['pedidos' => $pedidos]);
     }
 
     /**

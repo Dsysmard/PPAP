@@ -17,6 +17,16 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-Route::get('ppap/pedidos', 'PedidosController@index');
+Route::resource('ppap/pedidos', 'PedidosController');
 
 Route::get('ppap/pedidos/create', 'PedidosController@create');
+
+Route::get('test/datepicker', function(){
+	return view('datepicker');
+});
+
+Route::post('/test/save', ['as' => 'save-date',
+                           'uses' => 'DateController@showDate', 
+                            function () {
+                                return '';
+                            }]);

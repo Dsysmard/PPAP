@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('ppap.pedidos.index');
+        return redirect('ppap/pedidos');
     }
 }
