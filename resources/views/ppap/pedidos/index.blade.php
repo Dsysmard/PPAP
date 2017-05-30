@@ -2,7 +2,7 @@
 
 @section('content')
 	<h3>Listado de PPAPS</h3>
-
+	
 	<div class="row">
 	<div class=" col-xs-12">
 		<div class="table-responsive">

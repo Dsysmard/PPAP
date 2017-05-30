@@ -31,7 +31,8 @@ class PedidosController extends Controller
      */
     public function create()
     {
-        return view('ppap.pedidos.create');
+        $pedidos = new Pedido;
+        return view("ppap.pedidos.create", ["pedidos" => $pedidos]);
     }
 
     /**
@@ -42,7 +43,16 @@ class PedidosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pedidos = new Pedido;
+
+        $pedidos->customer_group = $request->customer_group;
+
+        if ($pedidos->save()) {
+            return redirect('ppap/pedidos');
+        }
+        else{
+            return view('ppap/pedidos/create', ["pedidos" => $pedidos]);
+        }
     }
 
     /**

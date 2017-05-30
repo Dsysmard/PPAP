@@ -92,7 +92,7 @@
               <ul class="treeview-menu">
                 <li><a href="{{url('ppap/pedidos')}}"><i class="fa fa-circle-o"></i> Pedidos</a></li>
 
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Crear</a></li>
+                <li><a href="{{url('ppap/pedidos/create')}}"><i class="fa fa-circle-o"></i> Crear</a></li>
               </ul>
             </li>
             
