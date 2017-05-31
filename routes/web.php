@@ -19,7 +19,7 @@ Route::get('/', 'HomeController@index');
 
 Route::resource('ppap/pedidos', 'PedidosController');
 
-Route::resource('ppap/pedidos/create', 'PedidosController@create');
+//Route::resource('ppap/pedidos/create', 'PedidosController@create');
 
 
 

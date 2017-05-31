@@ -63,7 +63,7 @@ class PedidosController extends Controller
      */
     public function show($id)
     {
-        //
+    
     }
 
     /**
@@ -74,7 +74,8 @@ class PedidosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pedidos = Pedido::find($id);
+        return view ("ppap.pedidos.edit", ["pedidos" => $pedidos]);
     }
 
     /**
@@ -86,7 +87,16 @@ class PedidosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pedidos = Pedido::find($id);
+
+        $pedidos->customer_group = $request->customer_group;
+
+        if ($pedidos->save()) {
+            return redirect('/ppap/pedidos');
+        }
+        else{
+            return view('/ppap.pedidos.edit', ["pedidos" => $pedidos]);
+        }
     }
 
     /**
@@ -95,8 +105,10 @@ class PedidosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($idpedidos)
     {
-        //
+        Pedido::destroy($idpedidos);
+
+        return redirect('ppap/pedidos');
     }
 }

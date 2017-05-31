@@ -4,11 +4,12 @@
 	<h3>Listado de PPAPS</h3>
 	
 	<div class="row">
-	<div class=" col-xs-12">
+	<div class="col-xs-12">
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered table-condensed table-hover table table-bordered">
 				<thead>
 					<tr>
+						<td>ID</td>
 						<td>Customer Group</td>
 						<td>Customer</td>
 						<td>Contact Name</td>
@@ -42,6 +43,7 @@
 				<tbody>
 					@foreach ($pedidos as $pedido)
 					<tr>
+						<td>{{ $pedido->idpedidos }}</td>
 						<td>{{ $pedido->customer_group }}</td>
 						<td>{{ $pedido->customer }}</td>
 						<td>{{ $pedido->contact_name }}</td>
@@ -71,7 +73,8 @@
 						<td align="center">
 							<a class="btn btn-info" href="">VER</a>
 							</br>
-							<a class="btn btn-info" href="">EDITAR</a>
+							<a class="btn btn-info" href="{{url('/ppap/pedidos/' .$pedido->idpedidos. '/edit')}}">EDITAR</a>
+							@include('ppap.pedidos.delete', ['pedidos' => $pedidos])
 						</td>
 					</tr>
 					@endforeach
