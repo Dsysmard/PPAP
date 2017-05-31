@@ -183,6 +183,14 @@
     <script src="{{url('js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{url('js/app.min.js')}}"></script>
+
+
+<script>
+  $('.datepicker').datepicker({
+    format: "yyyy/mm/dd",
+    language: "es",
+    autoclose: true
+});
     
   </body>
 </html>

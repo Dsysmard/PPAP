@@ -1,3 +1,5 @@
+
+
 		{!! Form::open(['url' => $url, 'method' => $method, 'files' => true]) !!}
 	
 			<div class="form-group">
@@ -44,7 +46,7 @@
 			{{ Form::text('etr',$pedidos->etr,['class'=>'form-control','placeholder'=>'ETR']) }}
 			</div>
 
-			<div class="form-group">
+			<div class="form-group ">
 			{{ Form::text('date_request',$pedidos->date_request,['class'=>'form-control','placeholder'=>'Date Request']) }}
 			</div>
 
@@ -108,3 +110,6 @@
 			</div>
 
 		{!! Form::close() !!}
+
+
+

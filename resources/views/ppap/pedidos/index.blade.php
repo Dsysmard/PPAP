@@ -2,7 +2,20 @@
 
 @section('content')
 	<h3>Listado de PPAPS</h3>
-	
+	<div class="col-md-6">
+		{!! Form::open(['method' => 'GET', 'url' => '/ppap/pedidos', 'class' => 'navbar-form navbar-left', 'role' => 'search']) !!}
+		<div class="input-group custom-search-form">
+			<input type="text" name="search" class="form-control">
+			<span class="input-group-btn">
+				<button type="submit" class="btn btn-default-sm">
+					<i class="fa fa-search">
+						
+					</i>
+				</button>
+			</span>
+		</div>
+		{!! Form::close() !!}
+	</div>
 	<div class="row">
 	<div class="col-xs-12">
 		<div class="table-responsive">
