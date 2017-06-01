@@ -99,7 +99,7 @@
            
             
                        
-            <li class="treeview">
+            {{-- <li class="treeview">
               <a href="#">
                 <i class="fa fa-folder"></i> <span>Acceso</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -108,6 +108,7 @@
                 <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
                 
               </ul>
+              
             </li>
              <li>
               <a href="#">
@@ -120,7 +121,7 @@
                 <i class="fa fa-info-circle"></i> <span>Acerca De...</span>
                 <small class="label pull-right bg-yellow">IT</small>
               </a>
-            </li>
+            </li> --}}
                         
           </ul>
         </section>
